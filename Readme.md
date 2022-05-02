@@ -38,6 +38,8 @@ Scripts have been tested under *Ubuntu 18.04 LTS*, but should generally work on 
 
 ## Running instructions
 
+For detailed running instructions, please refer to [Wiki page](https://github.com/ivartb/metafx/wiki#step-by-step-example).
+
 ## Contact
 
 Please report any problems directly to the GitHub [issue tracker](https://github.com/ivartb/metafx/issues).
