@@ -105,7 +105,7 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 
 
 
-cmd="bash metafast.sh "
+cmd="metafast.sh "
 if [[ $k ]]; then
     cmd+="-k $k "
 fi
