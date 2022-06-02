@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Running: $@"
+echo "Running: $0 $@"
 
 pwd=`dirname "$0"`
 
@@ -82,22 +82,22 @@ case $key in
     
     -m|--memory)
     m="$2"
-    shift # past argument
-    shift # past value
+    shift
+    shift
     ;;
     -p|--available-processors)
     p="$2"
-    shift # past argument
-    shift # past value
+    shift
+    shift
     ;;
     -w|--work-dir)
     w="$2"
-    shift # past argument
-    shift # past value
+    shift
+    shift
     ;;
     *)    # unknown option
     POSITIONAL+=("$1") # save it in an array for later
-    shift # past argument
+    shift
     ;;
 esac
 done
@@ -105,7 +105,7 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 
 
 
-cmd="metafast.sh "
+cmd="bash metafast.sh "
 if [[ $k ]]; then
     cmd+="-k $k "
 fi
@@ -267,7 +267,7 @@ tmp=1
 if [[ ${minSamples} ]]; then
     tmp=${minSamples}
 fi
-G1=$(get_G.sh ${w}/unique_kmers_class1/log ${tmp})
+G1=$(bash get_G.sh ${w}/unique_kmers_class1/log ${tmp})
 
 if [[ ${class1} ]]; then
     cmd3_1+="--pivot ${w}/unique_kmers_class1/kmers/filtered_${G1}.kmers.bin "
@@ -292,7 +292,7 @@ tmp=1
 if [[ ${minSamples} ]]; then
     tmp=${minSamples}
 fi
-G2=$(get_G.sh ${w}/unique_kmers_class2/log ${tmp})
+G2=$(bash get_G.sh ${w}/unique_kmers_class2/log ${tmp})
 
 if [[ ${class2} ]]; then
     cmd3_2+="--pivot ${w}/unique_kmers_class2/kmers/filtered_${G2}.kmers.bin "
@@ -318,7 +318,7 @@ if [[ ${class3} ]]; then
     if [[ ${minSamples} ]]; then
         tmp=${minSamples}
     fi
-    G3=$(get_G.sh ${w}/unique_kmers_class3/log ${tmp})
+    G3=$(bash get_G.sh ${w}/unique_kmers_class3/log ${tmp})
     
     if [[ ${class3} ]]; then
         cmd3_3+="--pivot ${w}/unique_kmers_class3/kmers/filtered_${G3}.kmers.bin "
