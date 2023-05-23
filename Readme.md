@@ -4,6 +4,14 @@
 
 The idea behind **MetaFX** is to introduce feature extraction algorithm specific for metagenomics short reads data. It is capable of processing hundreds of samples 1-10 Gb each. The distinct property of suggest approach is the construction of meaningful features, which can not only be used to train classification model, but also can be further annotated and biologically interpreted.
 
+## Deprecation note
+
+This version of MetaFX is deprecated since 23.05.2023 and moved to [https://github.com/ctlab/metafx_old](https://github.com/ctlab/metafx_old).
+
+[New version](https://github.com/ctlab/metafx) with many more supported features and improvements is available. Consider trying it!
+
+----
+
 ![idea](./img/idea.png)
 
 **MetaFX** documentation is available on the GitHub [wiki page](https://github.com/ivartb/metafx/wiki).<br/>
